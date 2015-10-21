@@ -1,0 +1,105 @@
+html
+{
+    margin: 0;
+}
+
+body
+{
+    margin: 0;
+}
+
+header,
+main
+{
+    margin: 0 auto;
+    padding: 10px 25px;
+    width: 1500px;
+    background-color: #f0f8ff;
+}
+
+h1
+{
+    text-align: center;
+}
+
+section {
+    margin: 10px 0px;
+}
+
+table,
+tr,
+td,
+th
+{
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#in:checked ~ table .out
+{
+    display: none;
+}
+
+#out:checked ~ table .in
+{
+    display: none;
+}
+
+tr:[display="table-row"]:nth-child(2n)
+{
+    background-color: #f0f0f0;
+}
+
+tr:[display="table-row"]:nth-child(2n+1)
+{
+    background-color: #c0c0c0;
+}
+
+tr:nth-child(1)
+{
+    background-color: #aaa;
+}
+
+tr:hover:nth-child(n+2)
+{
+    background-color: #faa;
+}
+
+td:hover
+{
+    background-color: #faa;
+}
+
+.logo
+{
+    height: 25px;
+    margin-right: 5px;
+}
+
+label
+{
+    font-size: 15pt;
+}
+
+input,
+button
+{
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
+
+.sendForm
+{
+    height: 150px;
+}
+
+.submit
+{
+    display: none;
+}
+
+form:valid > .submit
+{
+    display: block;
+}
