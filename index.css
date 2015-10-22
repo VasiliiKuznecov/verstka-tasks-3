@@ -36,11 +36,13 @@ th
     border-collapse: collapse;
 }
 
-#in:checked ~ table .out
+table
 {
-    display: none;
+    width: 100%;
+    overflow: hidden;
 }
 
+#in:checked ~ table .out,
 #out:checked ~ table .in
 {
     display: none;
@@ -58,12 +60,31 @@ tr:nth-child(2n+1)
 
 tr:nth-child(1)
 {
-    background-color: #aaa;
+    background-color: #a0a0a0;
 }
 
 tr:hover:nth-child(n+2)
 {
     background-color: #faa;
+}
+
+td:hover
+{
+    position: relative;
+}
+
+td:hover::after
+{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -10000px;
+    height: 100000px;
+    width: 100%;
+    background-color: #faa;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .logo
