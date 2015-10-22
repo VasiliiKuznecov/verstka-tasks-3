@@ -48,6 +48,26 @@ table
     display: none;
 }
 
+#city[value="Иркутск"] ~ table tr:nth-child(n+2):not([directionPlace="Иркутск"]),
+#city[value="Красноярск"] ~ table tr:nth-child(n+2):not([directionPlace="Красноярск"]),
+#city[value="С-Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
+#city[value="Санкт-Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
+#city[value="Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
+#city[value="Москва"] ~ table tr:nth-child(n+2):not([directionPlace^="Москва"]),
+#city[value="Москва/дмд"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/дмд"]),
+#city[value="Домодедово"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/дмд"]),
+#city[value="Москва/внк"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/внк"]),
+#city[value="Внуково"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/внк"]),
+#city[value="Анталья"] ~ table tr:nth-child(n+2):not([directionPlace="Анталья"]),
+#city[value="Шарм Эль Шейх"] ~ table tr:nth-child(n+2):nth-child(n+2):not([directionPlace="Шарм Эль Шейх"]),
+#city[value="Прага"] ~ table tr:nth-child(n+2):not([directionPlace="Прага"]),
+#city[value="Сочи"] ~ table tr:nth-child(n+2):not([directionPlace="Сочи"]),
+#city[value="Тель-Авив"] ~ table tr:nth-child(n+2):not([directionPlace="Тель-Авив"]),
+#city[value="Тюмень"] ~ table tr:nth-child(n+2):not([directionPlace="Тюмень"])
+{
+    display: none;
+}
+
 tr:nth-child(2n)
 {
     background-color: #f0f0f0;
