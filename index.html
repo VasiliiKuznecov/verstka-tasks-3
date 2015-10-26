@@ -24,7 +24,7 @@
                 <input id="all" type="radio" name="direction" value="all" checked>
                 <label for="all">все</label>
                 <table>
-                    <tbody>
+                    <thead>
                         <tr>
                             <th>Номер рейса</th>
                             <th>Тип рейса</th>
@@ -35,6 +35,8 @@
                             <th>Номер терминала</th>
                             <th>Статус рейса</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr class="out" directionPlace="Иркутск">
                             <td>U6-385</td>
                             <td>Вылет</td>
@@ -296,10 +298,14 @@
             <br>
             <section>
                 <form class="sendForm" method="post" action="sendInfoHandler.php">
-                        <input type="email" placeholder="email" required><br>
+                        <input
+                            type="email"
+                            pattern="^[^@]+@([^@]+\.)+[^@]+$"
+                            placeholder="email"
+                            required><br>
                         <input
                             type="tel"
-                            pattern="^[0-9\+\(\)\- ]+$"
+                            pattern="^\+?([0-9]+\-?)*[0-9]+$"
                             placeholder="Телефон"
                             required>
                     <button class="submit">Отправить данные о рейсе на телефон</button>

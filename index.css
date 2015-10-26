@@ -1,8 +1,4 @@
-html
-{
-    margin: 0;
-}
-
+html,
 body
 {
     margin: 0;
@@ -48,42 +44,42 @@ table
     display: none;
 }
 
-#city[value="Иркутск"] ~ table tr:nth-child(n+2):not([directionPlace="Иркутск"]),
-#city[value="Красноярск"] ~ table tr:nth-child(n+2):not([directionPlace="Красноярск"]),
-#city[value="С-Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
-#city[value="Санкт-Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
-#city[value="Петербург"] ~ table tr:nth-child(n+2):not([directionPlace="С-Петербург"]),
-#city[value="Москва"] ~ table tr:nth-child(n+2):not([directionPlace^="Москва"]),
-#city[value="Москва/дмд"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/дмд"]),
-#city[value="Домодедово"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/дмд"]),
-#city[value="Москва/внк"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/внк"]),
-#city[value="Внуково"] ~ table tr:nth-child(n+2):not([directionPlace="Москва/внк"]),
-#city[value="Анталья"] ~ table tr:nth-child(n+2):not([directionPlace="Анталья"]),
-#city[value="Шарм Эль Шейх"] ~ table tr:nth-child(n+2):nth-child(n+2):not([directionPlace="Шарм Эль Шейх"]),
-#city[value="Прага"] ~ table tr:nth-child(n+2):not([directionPlace="Прага"]),
-#city[value="Сочи"] ~ table tr:nth-child(n+2):not([directionPlace="Сочи"]),
-#city[value="Тель-Авив"] ~ table tr:nth-child(n+2):not([directionPlace="Тель-Авив"]),
-#city[value="Тюмень"] ~ table tr:nth-child(n+2):not([directionPlace="Тюмень"])
+#city[value="Иркутск"] ~ table tbody tr:not([directionPlace="Иркутск"]),
+#city[value="Красноярск"] ~ table tbody tr:not([directionPlace="Красноярск"]),
+#city[value="С-Петербург"] ~ table tbody tr:not([directionPlace="С-Петербург"]),
+#city[value="Санкт-Петербург"] ~ table tbody tr:not([directionPlace="С-Петербург"]),
+#city[value="Петербург"] ~ table tbody tr:not([directionPlace="С-Петербург"]),
+#city[value="Москва"] ~ table tbody tr:not([directionPlace^="Москва"]),
+#city[value="Москва/дмд"] ~ table tbody tr:not([directionPlace="Москва/дмд"]),
+#city[value="Домодедово"] ~ table tbody tr:not([directionPlace="Москва/дмд"]),
+#city[value="Москва/внк"] ~ table tbody tr:not([directionPlace="Москва/внк"]),
+#city[value="Внуково"] ~ table tbody tr:not([directionPlace="Москва/внк"]),
+#city[value="Анталья"] ~ table tbody tr:not([directionPlace="Анталья"]),
+#city[value="Шарм Эль Шейх"] ~ table tbody tr:not([directionPlace="Шарм Эль Шейх"]),
+#city[value="Прага"] ~ table tbody tr:not([directionPlace="Прага"]),
+#city[value="Сочи"] ~ table tbody tr:not([directionPlace="Сочи"]),
+#city[value="Тель-Авив"] ~ table tbody tr:not([directionPlace="Тель-Авив"]),
+#city[value="Тюмень"] ~ table tbody tr:not([directionPlace="Тюмень"])
 {
     display: none;
 }
 
-tr:nth-child(2n)
+tbody tr:nth-child(2n)
 {
     background-color: #f0f0f0;
 }
 
-tr:nth-child(2n+1)
+tbody tr:nth-child(2n+1)
 {
     background-color: #c0c0c0;
 }
 
-tr:nth-child(1)
+thead tr
 {
     background-color: #a0a0a0;
 }
 
-tr:hover:nth-child(n+2)
+tbody tr:hover:nth-child(n+2)
 {
     background-color: #faa;
 }
@@ -135,7 +131,7 @@ button
     display: none;
 }
 
-form:valid > .submit
+form:valid .submit
 {
     display: block;
 }
